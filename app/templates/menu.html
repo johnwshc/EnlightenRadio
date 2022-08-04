@@ -1,0 +1,23 @@
+<h2> {{ title }} </h2>
+<h3 class="fw-bold"> {{ ts }}</h3>
+<div>
+    <table class="table">
+
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        {% for row in rows %}
+            <tr>
+                <td>row[0]</td>
+                <td>row[1]</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</div>

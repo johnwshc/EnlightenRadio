@@ -1,0 +1,40 @@
+
+
+<style>
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/Logo Title */
+.header {
+  padding: 40px;
+  text-align: center;
+  background: #560404;
+  color: white;
+  font-size: 30px;
+}
+
+/* Page Content */
+.content {padding:20px;}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+}
+</style>
+
+
+<div class="header">
+  <h1>{{ m3u.categories }}</h1>
+    <h3>{{ m3u.playlist_name }}</h3>
+</div>
+
+<div class="content">
+  {{ m3u.simple_html }}
+</div>

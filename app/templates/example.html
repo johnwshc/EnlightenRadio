@@ -1,0 +1,41 @@
+{% extends "erbase.html" %}
+
+{% block content %}
+    <div class="container mt-lg-5">
+    <h1 class="text-center pt-2 pb-4">Shuffle Daily Rotations</h1>
+    <p class="mx-5 pt-4 fs-5"> Each day of the week is mapped to one of three theme menus. Each menu conisists
+    of playlists mapped to time slots in a 24 hour schedule. The shuffle randomizes the playlist sources,
+    and updates the active playlists.</p>
+    </div>
+    <div class="mx-auto bg-primary text-light fs-5" style="width: 400px;">
+
+        <form method="post">
+            <div class="form-group">
+            {{ form.csrf_token }}
+            {{ form.example }}
+            </div>
+            <button type="submit">Shuffle</button>
+        </form>
+    </div>
+{% endblock %}
+
+{#<div class="container mt-3">#}
+{#  <h2>Checkboxes</h2>#}
+{#  <p>To style a checkbox, use a container element with a .form-check class, and add .form-check-label to labels, and .form-check-input to the input with type="checkbox".</p>#}
+{#  <p>The form below contains three checkboxes. The first option is checked by default, and the last option is disabled:</p>#}
+{#  <form action="/action_page.php">#}
+{#    <div class="form-check">#}
+{#      <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>#}
+{#      <label class="form-check-label" for="check1">Option 1</label>#}
+{#    </div>#}
+{#    <div class="form-check">#}
+{#      <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">#}
+{#      <label class="form-check-label" for="check2">Option 2</label>#}
+{#    </div>#}
+{#    <div class="form-check">#}
+{#      <input type="checkbox" class="form-check-input" disabled>#}
+{#      <label class="form-check-label">Option 3</label>#}
+{#    </div>#}
+{#    <button type="submit" class="btn btn-primary mt-3">Submit</button>#}
+{#  </form>#}
+{#</div>#}

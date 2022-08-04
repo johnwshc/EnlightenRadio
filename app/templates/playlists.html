@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Enlighten Radio - Playlists</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+a:link {
+	color: #993300;
+	text-decoration: none;
+}
+a:visited {
+	color: #993300;
+	text-decoration: none;
+}
+a:hover {
+	color: #FF0000;
+	text-decoration: underline;
+}
+a:active {
+	color: #993300;
+	text-decoration: none;
+}
+#main_table{
+	margin-left:auto;
+	margin-right:auto;
+	border:#C7DCE2 1px solid;
+	width: 99%;
+	padding:0;
+}
+#main_table td {
+	border:#C7DCE2 1px solid;
+	padding:4px;
+}
+.head_style {
+	font-size: 12px;
+	font-weight: bold;
+	padding: 2px;
+}
+-->
+</style>
+</head>
+
+<body>
+
+
+
+<table align="center" cellpadding="0" cellspacing="0" id="main_table">
+  <div align='center'><strong> Enlighten Radio Playlists </strong></div>
+<br />
+
+<tr>
+   <td><div align='center' class='head_style'>Playlist Name</div></td>
+   <td><div align='center' class='head_style'>Playlist Duration</div></td>
+    <td><div align='center' class='head_style'>Action</div></td>
+</tr>
+     {% for p in pls %}
+<tr>
+   <td nowrap='nowrap'>{{ p.playlist_name}}</td>
+   <td nowrap='nowrap'>{{ p.duration }} minutes </td>
+    <td nowrap='nowrap'> <a href={{ p.uri }}>Get Playlist</a></td>
+</tr>
+    {% endfor %}
+</table>
+</body>
+</html>
